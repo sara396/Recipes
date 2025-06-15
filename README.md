@@ -76,15 +76,4 @@
         ```
         האפליקציה תהיה זמינה בדרך כלל בכתובת `http://localhost:4200/`.
 
-## 🤝 תרומה לפרויקט
-
-אם ברצונך לתרום לפרויקט, נשמח לקבל עזרה! אנא פתח/י Issue או Pull Request.
-
 ---
-
-**הערה**:
-* החלף/י את `<YOUR_REPOSITORY_URL_HERE>` בכתובת ה-URL האמיתית של הריפוזיטורי שלך ב-GitHub/GitLab.
-* ייתכן שתצטרך/י לשנות את שמות התיקיות `backend` ו-`frontend` אם הן שונות בפרויקט שלך.
-* ודא/י שהגדרת את משתני הסביבה בקובץ `.env` בצורה נכונה עבור הפרויקט שלך (לדוגמה, המפתח הסודי ל-JWT).
-
-קובץ README כזה יספק למפתחים אחרים (וגם לעצמך בעתיד) את כל המידע הדרוש כדי להבין את הפרויקט, להתקין אותו ולהריץ אותו. בהצלחה!
