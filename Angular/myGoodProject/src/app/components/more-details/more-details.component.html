@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <div class="row align-items-start">
+
+    <div class="col-md-8">
+      <h2 class="mb-3">{{ recipe.recipeName }}</h2>
+
+      <ul class="list-group mb-4">
+        <li class="list-group-item"><strong>ID:</strong> {{ recipe._id }}</li>
+        <li class="list-group-item"><strong>User Code:</strong> {{ recipe.userCode }}</li>
+        <li class="list-group-item"><strong>Level:</strong> {{ recipe.level }}</li>
+        <li class="list-group-item"><strong>Time:</strong> {{ recipe.time }}</li>
+        <li class="list-group-item"><strong>Type:</strong> {{ recipe.type }}</li>
+      </ul>
+
+      <h5>Ingredients:</h5>
+      <ul class="list-group mb-4">
+        @for (x of recipe.ingredient; track $index) {
+        <li class="list-group-item">
+          <strong>{{ x.name }}</strong> - {{ x.amount }}
+        </li>
+        }
+      </ul>
+      <a routerLink="/Home" class="btn btn-outline-primary">Go Back</a>
+    </div>
+
+    <div class="col-md-4 text-end">
+      <img [src]="url + recipe.pic" class="img-fluid rounded shadow" alt="..." />
+    </div>
+
+  </div>
+</div>

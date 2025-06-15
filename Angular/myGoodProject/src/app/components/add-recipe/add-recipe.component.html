@@ -1,0 +1,80 @@
+<section class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-lg p-4" style="max-width: 800px; width: 100%;">
+        <h2 class="text-center mb-4 text-primary">Add Recipe</h2>
+
+        <form>
+            <div class="mb-3">
+                <label for="recipeName" class="form-label">Name Recipe</label>
+                <input type="text" class="form-control" id="recipeName" name="recipeName" required
+                    [(ngModel)]="newRecipe.recipeName">
+            </div>
+
+            <!-- <div class="mb-3">
+                <label for="userCode" class="form-label">User Code</label>
+                <input type="text" class="form-control" id="userCode" name="userCode" required [(ngModel)]="newRecipe.userCode">
+            </div> -->
+
+            <div class="mb-4">
+                <h5 class="mb-3">Ingedient</h5>
+
+                <div class="d-flex gap-2 align-items-end">
+                    <div class="flex-grow-1">
+                        <label for="ingredientName" class="form-label">Name Ingredient</label>
+                        <input type="text" class="form-control" id="ingredientName" placeholder="example: sugar"
+                            name="nameIngredient" [(ngModel)]="ingredient.name">
+                    </div>
+
+                    <div class="flex-grow-1">
+                        <label for="ingredientAmount" class="form-label">כמות</label>
+                        <input type="text" class="form-control" id="ingredientAmount" placeholder="example: 2"
+                            name="emountIngredient" [(ngModel)]="ingredient.amount">
+                    </div>
+
+                    <div>
+                        <button type="button" (click)="saveNewIngredient()" class="btn btn-outline-primary">Add
+                            Ingredient</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="level" class="form-label">Level</label>
+                <select class="form-select" id="level" name="level" required [(ngModel)]="newRecipe.level">
+                    <option value="">Chose Level</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="time" class="form-label">Preparation time (in minutes)</label>
+                <input type="text" class="form-control" id="time" name="time" required [(ngModel)]="newRecipe.time">
+            </div>
+
+            <div class="mb-3">
+                <label for="type" class="form-label">Type</label>
+                <select class="form-select" id="type" name="type" required [(ngModel)]="newRecipe.type">
+                    <option value="">Chose Type</option>
+                    <option value="Meat">Meat</option>
+                    <option value="Dairy">Dairy</option>
+                    <option value="Fur">Fur</option>
+                </select>
+            </div>
+
+            <!--    בשביל הקבצים -->
+
+              <div class="mb-3">
+                <label for="pic" class="form-label">Pic</label>
+                <input type="file" class="form-control" id="pic" name="pic" required  (change)="onFileSelected($event)" >
+            </div>
+
+            <!-- <div class="mb-3">
+                <label for="pic" class="form-label">Pic</label>
+                <input type="text" class="form-control" id="pic" name="pic" required [(ngModel)]="newRecipe.pic">
+            </div> -->
+
+            <button (click)="addNewRecipe()" type="submit" class="btn btn-primary w-100">Save</button>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,83 @@
+<!-- <section class="container" style="padding-top: 50px; padding-bottom: 50px;">
+  <div class="card shadow-lg p-5 mx-auto" style="max-width: 500px; width: 100%; border-radius: 1rem;">
+    <div class="card-body text-center">
+
+      <h4 class="mb-4 text-primary">Sign up</h4>
+
+      <div class="form-outline mb-3">
+        <input type="text" id="input-id" class="form-control form-control-sm" [(ngModel)]="newUser._id"/>
+        <label class="form-label" for="input-id">_id</label>
+      </div>
+
+      <div class="form-outline mb-3">
+        <input type="text" id="input-name" class="form-control form-control-sm" [(ngModel)]="newUser.nameUser"/>
+        <label class="form-label" for="input-name">nameUser</label>
+      </div>
+
+      <div class="form-outline mb-3">
+        <input type="password" id="input-password" class="form-control form-control-sm" [(ngModel)]="newUser.password"/>
+        <label class="form-label" for="input-password">password</label>
+      </div>
+
+      <div class="form-outline mb-3">
+        <input type="text" id="input-address" class="form-control form-control-sm" [(ngModel)]="newUser.address"/>
+        <label class="form-label" for="input-address">address</label>
+      </div>
+
+      <div class="form-outline mb-3">
+        <input type="text" id="input-phone" class="form-control form-control-sm" [(ngModel)]="newUser.phone"/>
+        <label class="form-label" for="input-phone">phone</label>
+      </div>
+
+      <button (click)="addNewUser()" class="btn btn-primary btn-lg w-100" type="submit">register</button>
+
+      <hr class="my-4" />
+
+    </div>
+  </div>
+</section> -->
+
+
+<section class="container" style="padding-top: 50px; padding-bottom: 50px;">
+  <div class="card shadow-lg p-5 mx-auto" style="max-width: 500px; width: 100%; border-radius: 1rem;">
+    <div class="card-body">
+
+      <h4 class="text-center mb-4 text-primary">
+        <i class="fas fa-user-plus me-2"></i>Sign Up
+      </h4>
+
+      <div class="form-group mb-3 position-relative">
+        <i class="fas fa-id-badge position-absolute text-muted" style="top: 50%; left: 12px; transform: translateY(-50%);"></i>
+        <input type="text" class="form-control ps-5" placeholder="ID" [(ngModel)]="newUser._id">
+      </div>
+
+      <div class="form-group mb-3 position-relative">
+        <i class="fas fa-user position-absolute text-muted" style="top: 50%; left: 12px; transform: translateY(-50%);"></i>
+        <input type="text" class="form-control ps-5" placeholder="Username" [(ngModel)]="newUser.nameUser">
+      </div>
+
+      <div class="form-group mb-3 position-relative">
+        <i class="fas fa-lock position-absolute text-muted" style="top: 50%; left: 12px; transform: translateY(-50%);"></i>
+        <input type="password" class="form-control ps-5" placeholder="Password" [(ngModel)]="newUser.password">
+      </div>
+
+      <div class="form-group mb-3 position-relative">
+        <i class="fas fa-map-marker-alt position-absolute text-muted" style="top: 50%; left: 12px; transform: translateY(-50%);"></i>
+        <input type="text" class="form-control ps-5" placeholder="Address" [(ngModel)]="newUser.address">
+      </div>
+
+      <div class="form-group mb-3 position-relative">
+        <i class="fas fa-phone-alt position-absolute text-muted" style="top: 50%; left: 12px; transform: translateY(-50%);"></i>
+        <input type="text" class="form-control ps-5" placeholder="Phone" [(ngModel)]="newUser.phone">
+      </div>
+
+      <button (click)="addNewUser()" class="btn btn-primary btn-lg w-100">
+        <i class="fas fa-user-check me-2"></i>Register
+      </button>
+
+      <hr class="my-4" />
+
+    </div>
+  </div>
+</section>
+

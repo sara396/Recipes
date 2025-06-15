@@ -1,0 +1,70 @@
+<h1 class="text-center text-primary fw-bold display-4 my-4" style="color: dimgrey;">
+  Discover Delicious Recipes
+</h1>
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm px-4 py-2">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+
+    <!-- חלק שמאלי של הקישורים -->
+    <ul class="navbar-nav d-flex flex-row align-items-center">
+      <li class="nav-item me-3 dropdown">
+        <a class="nav-link fw-bold" data-bs-toggle="dropdown" routerLinkActive="text-primary"
+          [routerLinkActiveOptions]="{ exact: true }" role="button" aria-expanded="false">
+          <i class="fas fa-home me-1"></i>Home <i class="fas fa-caret-down ms-1"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a (click)="recipeS.setTypeToFilter('')" routerLink="/Home" class="dropdown-item">choose all</a></li>
+          <li><a (click)="recipeS.setTypeToFilter('Dairy')" routerLink="/Home" class="dropdown-item">filter by dairy</a>
+          </li>
+          <li><a (click)="recipeS.setTypeToFilter('Meat')" routerLink="/Home" class="dropdown-item">filter by meat</a>
+          </li>
+          <li><a (click)="recipeS.setTypeToFilter('Fur')" routerLink="/Home" class="dropdown-item">filter by fur</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item me-3">
+        <a class="nav-link" routerLink="/Login" routerLinkActive="text-primary">
+          <i class="fas fa-sign-in-alt me-1"></i>Login
+        </a>
+      </li>
+
+      <li class="nav-item me-3">
+        <a class="nav-link" routerLink="/SignUp" routerLinkActive="text-primary">
+          <i class="fas fa-user-plus me-1"></i>SignUp
+        </a>
+      </li>
+
+      @if(userS.getRegister()!=false)
+      {
+      <li class="nav-item me-3">
+        <a class="nav-link" routerLink="/AddRecipe" routerLinkActive="text-primary">
+          <i class="fas fa-plus-circle me-1"></i>Add Recipe
+        </a>
+      <li class="nav-item me-3">
+        <a class="nav-link fw-bold d-flex align-items-center" routerLink="/PersonalArea"
+          routerLinkActive="text-primary">
+          <i class="far fa-heart"></i>
+          Fevorite Recipes
+        </a>
+      </li>
+      }
+    </ul>
+
+    <!-- חלק ימני עם שם המשתמש -->
+    @if(userS.getUserName()!=""){
+    <div class="d-flex align-items-center">
+      <span class="me-3 text-muted">
+        <i class="fas fa-user-circle me-1"></i>
+        <strong>{{ userS.getUserName() }}</strong>
+      </span>
+      <button class="btn btn-outline-danger" (click)="logOut()">
+        <i class="fas fa-sign-out-alt me-1"></i>log out
+      </button>
+    </div>
+    }
+
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

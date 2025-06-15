@@ -1,0 +1,24 @@
+<div class="cards-container">
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+        @for(recipe of arrTemp; track $index) {
+        <div class="recipe-card">
+            <img [src]="url + recipe.pic" class="recipe-img" alt="{{recipe.recipeName}}" />
+            <div class="recipe-body">
+                <h3>{{recipe.recipeName}}</h3>
+                <p class="level">Level: {{recipe.level}}</p>
+                <button class="btnMore" (click)="getRecipeById(recipe._id)">more information</button>
+                @if(userS.getRegister()!=false){
+                <br>
+                <!-- <button class="btnFevorite"
+                    (click)="addToFevoriteRecipe(recipe._id!)">
+                    <span>add to favorite recipe</span>
+                    <i class="fas fa-heart text-danger"></i>
+                </button> -->
+                <!-- add to fevorite recipe  -->
+                <button  (click)="addToFevoriteRecipe(recipe._id!)">❤️</button>
+                }
+            </div>
+        </div>
+        }
+    </div>
+</div>

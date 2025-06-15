@@ -1,0 +1,40 @@
+# ====== NODE.JS ======
+node_modules/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# תוצרי build
+dist/
+build/
+.tmp/
+
+# כיסוי בדיקות
+coverage/
+
+# ====== ANGULAR ======
+.angular/
+.angular-cache/
+*.tsbuildinfo
+
+# ====== SYSTEM ======
+.DS_Store
+Thumbs.db
+
+# ====== IDE/EDITOR ======
+.vscode/
+.idea/
+
+# ====== LOGS ======
+logs/
+*.log
+log.txt
+
+# ====== OTHERS ======
+/*.sublime-workspace
+*.swp
+*.bak
+*.tmp
